@@ -1,18 +1,18 @@
 import React from 'react'
 import '../styles/App.css';
 
-function App()  {
-  //Write your code here
-  const queryParams = newURLSearchParams(window.location.search)
+
+function App() {
+  const queryParams = new URLSearchParams(window.location.search)
   const id = queryParams.get("id")
   const name = queryParams.get("name")
   const designation = queryParams.get("designation")
 
-  return(
+  return (
     <div className="App">
-    <div className="details">
-    <p>Employee {id} named {name} works as {designation}</p>
-    </div>
+      <div className="details">
+        <p>Employee {id} named {name} works as {designation}</p>
+      </div>
     </div>
   )
 }
